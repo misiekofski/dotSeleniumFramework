@@ -1,5 +1,5 @@
 {
-  "Browser": "Chrome",
+  "Browser": "Firefox",
   "DownloadFolder": "TestResult",
   "RunAsHeadless": false,
   "ImplicitWaitTimeout":  10

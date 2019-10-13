@@ -4,6 +4,7 @@ using Newtonsoft.Json;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Edge;
+using OpenQA.Selenium.Firefox;
 
 namespace dotSeleniumFramework.Helpers
 {
@@ -22,7 +23,11 @@ namespace dotSeleniumFramework.Helpers
             switch (browserType)
             {
                 case BrowserType.Edge:
-                    driver = new EdgeDriver();
+                    driver = new EdgeDriver(AppDomain.CurrentDomain.BaseDirectory);
+                    break;
+
+                case BrowserType.Firefox:
+                    driver = new FirefoxDriver(AppDomain.CurrentDomain.BaseDirectory);
                     break;
 
                 case BrowserType.Chrome:
