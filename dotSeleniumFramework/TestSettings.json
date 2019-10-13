@@ -1,0 +1,6 @@
+{
+  "Browser": "Chrome",
+  "DownloadFolder": "./",
+  "RunAsHeadless": "",
+  "ImplicitWaitTimeout":  10
+}
