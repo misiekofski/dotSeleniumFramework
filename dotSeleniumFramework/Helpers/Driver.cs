@@ -1,5 +1,6 @@
 ﻿using System;
 using dotSeleniumFramework.Helpers.Enums;
+using Newtonsoft.Json;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Edge;
@@ -10,6 +11,8 @@ namespace dotSeleniumFramework.Helpers
     {
         private static IWebDriver driver;
         private static string DownloadFolder;
+
+        private static readonly string nullRefMsg = "Driver must be initialized before calling for its instance.";
 
         private Driver(TestSettings testSettings)
         {
@@ -41,5 +44,7 @@ namespace dotSeleniumFramework.Helpers
 
         public static Driver Initialize(TestSettings settings) => new Driver(settings);
 
+
+        public static IWebDriver Instance => driver ?? throw new NullReferenceException(nullRefMsg);
     }
 }

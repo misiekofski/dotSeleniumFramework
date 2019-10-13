@@ -3,5 +3,5 @@
 
 @smoke
 Scenario: Check if webpage is loaded correctly
-	Given I open https://www.google.com/ website
+	Given I open https://www.omada.net/ website
 	Then Google webpage is loaded correctly
