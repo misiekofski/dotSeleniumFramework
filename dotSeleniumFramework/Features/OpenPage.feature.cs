@@ -82,7 +82,15 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
  testRunner.Given("I open https://www.omada.net/ website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 7
- testRunner.Then("Google webpage is loaded correctly", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I select menu \"Business Value\" -> \"EU GDPR\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 8
+ testRunner.And("Create screenshot of current page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 9
+ testRunner.And("I scroll down to \"8 Steps to Meeting the GDPR Compliance Requirements\" and click " +
+                    "download button in this section", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 10
+ testRunner.Then("New tab is opened with url \"https://www.omada.net/en-us/more/resources/eu-gdpr-e-" +
+                    "book\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

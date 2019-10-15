@@ -1,6 +1,4 @@
-﻿
-
-using System;
+﻿using System;
 using System.Runtime.InteropServices;
 using dotSeleniumFramework.Helpers;
 using OpenQA.Selenium;
@@ -29,7 +27,8 @@ namespace dotSeleniumFramework.Pages.Abstract
         protected readonly ISearchContext searchContext;
         private readonly TimeSpan? timeout;
 
-        protected virtual By component => By.XPath(".");
+        protected virtual By componentContainerLocator => By.XPath(".");
+        protected virtual IWebElement componentContainer => searchContext.FindElement(componentContainerLocator);
 
         protected override void HandleLoadError (WebDriverException ex) =>
             throw new LoadableComponentException($"Page {typeof(T).Name} was not loaded", ex);

@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using dotSeleniumFramework.Helpers;
-using dotSeleniumFramework.Pages.Abstract;
+﻿using dotSeleniumFramework.Pages.Abstract;
 using OpenQA.Selenium;
-using TechTalk.SpecFlow.Bindings.Reflection;
 
 namespace dotSeleniumFramework.Pages
 {
